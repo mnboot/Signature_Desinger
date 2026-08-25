@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefHeight="314.0" prefWidth="548.0" spacing="20.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mnboot.signaturedesinger.GUI.HelloController">
+
+    <ToolBar>
+      <HBox prefHeight="25.0" prefWidth="244.0" spacing="5.0">
+         <children>
+              <Button mnemonicParsing="false" onAction="#ocExportPrivate" text="Export Private" />
+            <Button fx:id="clickExportPublic" mnemonicParsing="false" onAction="#ocExportPublic" text="Export Public" />
+            <Button mnemonicParsing="false" onAction="#ocVerify" text="verify" />
+         </children>
+      </HBox>
+      <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
+   
+             <TextField fx:id="txtfieldPrefix" alignment="TOP_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="131.0" promptText="Prefix (e.g., Hi)" />
+   
+             <Button onAction="#ocGenerate" text="Generate" />
+    </ToolBar>
+   <Label fx:id="lblMessage" text="Type your prefix, then click &quot;Generate&quot;" />
+   <TextArea fx:id="txtareaProgress" editable="false" prefHeight="319.0" prefWidth="592.0">
+      <opaqueInsets>
+         <Insets bottom="100.0" left="100.0" right="100.0" top="100.0" />
+      </opaqueInsets>
+   </TextArea>
+
+</VBox>

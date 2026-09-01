@@ -1,0 +1,13 @@
+title Digital Signature 
+
+
+participant Sender
+participant Receiver
+
+Sender->Sender:<size:9>Write a message and sign it with his own private key</size>
+
+Sender->Receiver:Send myMessage.txt And myMessage.txt.sig\n
+
+
+Sender->Receiver:Send public key as proof that the sender is really him
+Receiver-->Receiver:<size:9>Use his public key to decrypt myMessage.enc, to verify the message\n

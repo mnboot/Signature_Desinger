@@ -41,7 +41,6 @@ public class RSA implements PublicKeyEncryption {
     }
 
 
-    //TODO: remove this method from RSA class to another class
     public void bruteForce(String prefix) {
         prefix = prefix.toLowerCase();
 
@@ -65,9 +64,7 @@ public class RSA implements PublicKeyEncryption {
                         .startsWith(prefix);
 
                 if (equals) {
-                    setKeyPair(keyPair);
-                    setPublicKey(keyPair.getPublic());
-                    setPrivateKey(keyPair.getPrivate());
+                    generateNewKeyPair();
                     setKeyPairGenerated(true);
 
                     log.info("Found public key after {} attempts.", attempts);

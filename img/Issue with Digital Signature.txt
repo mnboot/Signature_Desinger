@@ -1,0 +1,22 @@
+title Issue w/ Digital Signature 
+
+participant Real Sender
+participant Fake Sender
+participant Receiver
+
+activate Real Sender
+
+note over Real Sender :sleeping, unaware\nthat Receiver is getting deceived
+
+Fake Sender->Fake Sender:write message and sign it with own private key
+
+Fake Sender->Receiver:deceiving Receiver saying that he is Real Sender
+
+Fake Sender->Receiver:send message "myMessage.txt" and its signature "myMessage.txt.sig"
+Fake Sender->Receiver:send his own public key to make the receiver verify his signature
+
+note over Receiver ;2:Receiver doesn't know what the real sender public key
+
+
+
+Receiver->Receiver:verifying the Fake Sender's message using his public key, thinking the key is from Real Sender

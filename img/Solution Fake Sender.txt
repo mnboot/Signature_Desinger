@@ -1,0 +1,30 @@
+title Solution
+
+participant Real Sender
+participant Fake Sender
+participant Receiver
+
+activate Real Sender
+
+note over Real Sender :sleeping, unaware\nthat Receiver is getting decieved
+
+Fake Sender->Fake Sender:write message and sign it with own private key
+
+Fake Sender->Receiver:deceiving Receiver saying that he is Real Sender
+
+Fake Sender->Receiver:send message "myMessage.txt" and its signature "myMessage.txt.sig"
+Fake Sender->Receiver:send his own public key to make the receiver verify his signature
+
+Fake Sender<-Receiver:What is the secure phrase?
+
+note over Fake Sender ;2:His public key does not have strong phrase related to Real Sender
+
+
+Fake Sender->Receiver:Um.. try "RlSndr"
+
+
+
+
+
+Receiver->Receiver:verifying the Fake Sender's public key with that phrase
+note over Receiver ;2:The public's fingerprint does not start with the phrase; \nso, it is not from Real Sender

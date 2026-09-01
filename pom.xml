@@ -81,7 +81,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>com.mnboot.signaturedesinger/com.mnboot.signaturedesinger.GUI.HelloApplication
+                            <mainClass>com.mnboot.signaturedesinger/com.mnboot.signaturedesinger.GUI.MainRunner
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

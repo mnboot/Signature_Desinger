@@ -10,19 +10,19 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="TOP_CENTER" prefHeight="314.0" prefWidth="548.0" spacing="20.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mnboot.signaturedesinger.GUI.HelloController">
+<VBox alignment="TOP_CENTER" prefHeight="314.0" prefWidth="548.0" spacing="20.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mnboot.signaturedesinger.GUI.SignatureDesingerController">
 
     <ToolBar>
       <HBox prefHeight="25.0" prefWidth="244.0" spacing="5.0">
          <children>
               <Button mnemonicParsing="false" onAction="#ocExportPrivate" text="Export Private" />
-            <Button fx:id="clickExportPublic" mnemonicParsing="false" onAction="#ocExportPublic" text="Export Public" />
+            <Button mnemonicParsing="false" onAction="#ocExportPublic" text="Export Public" />
             <Button mnemonicParsing="false" onAction="#ocVerify" text="verify" />
          </children>
       </HBox>
       <Separator orientation="VERTICAL" prefHeight="0.0" prefWidth="0.0" />
    
-             <TextField fx:id="txtfieldPrefix" alignment="TOP_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="131.0" promptText="Prefix (e.g., Hi)" />
+             <TextField fx:id="txtfieldPrefix" alignment="TOP_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="25.0" prefWidth="131.0" promptText="Prefix (e.g., Hi)" />
    
              <Button onAction="#ocGenerate" text="Generate" />
     </ToolBar>

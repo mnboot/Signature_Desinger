@@ -25,10 +25,10 @@ import java.security.NoSuchAlgorithmException;
 import java.util.ResourceBundle;
 import java.util.concurrent.atomic.AtomicReference;
 
-public class HelloController implements Initializable {
+public class SignatureDesingerController implements Initializable {
 
     private static final Logger log =
-            LogManager.getLogger(HelloController.class);
+            LogManager.getLogger(SignatureDesingerController.class);
 
 
     public TextField txtfieldPrefix;
@@ -41,7 +41,7 @@ public class HelloController implements Initializable {
 
     private Thread th;
 
-    public HelloController() throws NoSuchAlgorithmException {}
+    public SignatureDesingerController() throws NoSuchAlgorithmException {}
     public void ocGenerate(ActionEvent actionEvent) {
         prefix = txtfieldPrefix.getText();
 
@@ -154,10 +154,10 @@ public class HelloController implements Initializable {
         Window window = ((Node)actionEvent.getSource()).getScene().getWindow();
         HashBase hashBase = new HashBase(Hash.SHA256);
 
-
         AtomicReference<String> prefixAtom = new AtomicReference<>();
         TextInputDialog dialog = new TextInputDialog();
         dialog.setTitle("Enter Prefix");
+        dialog.setContentText("Enter Prefix");
         dialog.showAndWait().ifPresent(prefixAtom::set);
 
         String prefix;
